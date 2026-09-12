@@ -5,6 +5,7 @@
 #include "../include/input.h"
 #include "../include/parser.h"
 #include "../include/process.h"
+#include "../include/builtin.h"
 
 int main() {
     char *line;
@@ -18,14 +19,11 @@ int main() {
         printf("myshell> ");
         line = read_line();
 
-        if (strcmp(line, "exit") == 0) {
-            free(line);
-            break;
-        }
-
         if (strlen(line) != 0) {
             tokens = parse_line(line);
-            execute(tokens);
+            if (execute_builtin(tokens) == 0) {
+                execute(tokens);
+            }
             free_tokens(tokens);
         }
 
@@ -33,5 +31,6 @@ int main() {
     }
 
     printf("Goodbye!\n");
-    return 0;
+ 
+   return 0;
 }
