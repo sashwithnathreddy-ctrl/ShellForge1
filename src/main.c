@@ -6,10 +6,13 @@
 #include "../include/parser.h"
 #include "../include/process.h"
 #include "../include/builtin.h"
+#include "../include/signals.h"
 
 int main() {
     char *line;
     char **tokens;
+
+    initialize_signals();
 
     printf("\n");
     printf("%s Version %s\n", SHELL_NAME, VERSION);
@@ -31,6 +34,5 @@ int main() {
     }
 
     printf("Goodbye!\n");
- 
-   return 0;
+    return 0;
 }
