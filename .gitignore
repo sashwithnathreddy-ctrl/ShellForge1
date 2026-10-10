@@ -2,4 +2,13 @@ bin/
 *.o
 *.exe
 *.out
+a.out
+*.save
+*.save.1
+*.save.2
+*.save.3
+bin/
+*.o
+*.exe
+*.out
 

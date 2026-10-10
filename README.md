@@ -1,18 +1,60 @@
 # ShellForge
 
-ShellForge is a Unix-like shell developed as part of the Operating Systems and Systems Programming Project-Based Learning course.
+A Unix-like shell implemented in C as an Operating Systems and Systems Programming project.
 
-## Features (Week 1)
+## Features
 
-- Interactive REPL loop
-- Makefile-based build
-- Git repository
-- Linux development environment
+### Process Management
+- fork()
+- exec()
+- waitpid()
+
+### Built-in Commands
+- cd
+- exit
+- pwd
+- help
+- clear
+- env
+
+### IPC
+- Pipes
+- Multiple pipelines
+
+### File I/O
+- Input redirection (<)
+- Output redirection (>)
+- Append redirection (>>)
+- Error redirection (2>)
+
+### Signals
+- SIGINT
+- SIGTSTP
+- SIGCHLD
+- SIGCONT
+
+### Concurrency
+- POSIX Threads
+- pthread_create()
+- pthread_join()
+- Mutex
+- Race-condition demonstration
+
+### Deadlock
+- Deadlock demonstration
+- Deadlock prevention
+- Lock ordering
+
+### Job Control
+- Background execution (&)
+- jobs
+- fg
+- bg
+- Process groups
+- Foreground/background control
 
 ## Build
 
+```bash
+make clean
 make
-
-## Run
-
-make run
